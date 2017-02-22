@@ -12,7 +12,7 @@ import UIKit
 enum TSAlertShowMode: Int {
     case Alert
     case XLineRotate //
-    case OpenDoor // 开门
+    case CloseDoor // 开门
 }
 
 enum TSAlertDismissAction: Int {
@@ -229,11 +229,11 @@ extension TSCustomAlertView {
             performSelector(#selector(XLineRotateDelay), withObject: nil, afterDelay: 0.3)
             
             break
-        case .OpenDoor:
+        case .CloseDoor:
             
             darkShadow.alpha = 0
             
-            openDoor()
+            closeDoor()
             
             performSelector(#selector(openDoorDelay), withObject: nil, afterDelay: 0.5)
             
@@ -420,7 +420,7 @@ private extension UIImage {
 // MARK: openDoor
 extension TSCustomAlertView {
     
-    @objc private func openDoor() {
+    @objc private func closeDoor() {
         
         let image = UIImage.getImageWithView(contentView)
         
