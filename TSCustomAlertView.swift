@@ -12,7 +12,7 @@ import UIKit
 enum TSAlertShowMode: Int {
     case Alert
     case XLineRotate //
-    case CloseDoor // 开门
+    case CloseDoor // 关门
 }
 
 enum TSAlertDismissAction: Int {
@@ -374,7 +374,7 @@ extension TSCustomAlertView {
         contentView.layer.addAnimation(animation, forKey: nil)
     }
 }
-
+// MARK: UIImage 扩展
 private extension UIImage {
     static func getImageWithView(view: UIView) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(view.size, false, UIScreen.mainScreen().scale /* 当前屏幕的分辨率*/)
